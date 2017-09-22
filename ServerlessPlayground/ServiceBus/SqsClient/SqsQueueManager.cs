@@ -36,5 +36,17 @@ namespace SqsClient
 
             return await _client.SendMessageAsync(sendMessageRequest);
         }
+
+        public async Task<ReceiveMessageResponse> ReceiveMessageAsync(string queueUrl)
+        {
+            ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest
+            {
+                QueueUrl = queueUrl
+            };
+
+            receiveMessageRequest.QueueUrl = queueUrl;
+
+            return await _client.ReceiveMessageAsync(receiveMessageRequest);
+        }
     }
 }
