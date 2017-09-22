@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFunctions", "AzureFunctions", "{429A614D-8D13-4EE0-8DE8-484C2A5CE328}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LambdaFunctions", "LambdaFunctions", "{DB8E8C63-09A7-47BE-80BD-28FD115CD68B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LambdaApplications", "LambdaApplications", "{A4D81588-43B9-4970-8CF9-588CC36A0B9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendWelcomeEmail", "SendWelcomeEmail", "{CE0C23E1-3435-440F-ACAC-02C48DC7AF78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SendOrderStatusSms", "SendOrderStatusSms", "{FF10B82C-C37F-4AD0-907E-7D9CBEB61CFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendWelcomeEmail", "LambdaFunctions\SendWelcomeEmail\SendWelcomeEmail.csproj", "{903704C1-EDF6-4894-86FB-16BABE9A7B4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendWelcomeEmail.Tests", "LambdaFunctions\SendWelcomeEmail.Tests\SendWelcomeEmail.Tests.csproj", "{77E9A314-6DB5-4B85-BC02-B08A4907BE6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{77DC5D75-E718-440B-9832-39D828D777F3}"
+	ProjectSection(SolutionItems) = preProject
+		DeployAll.ps1 = DeployAll.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{903704C1-EDF6-4894-86FB-16BABE9A7B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903704C1-EDF6-4894-86FB-16BABE9A7B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903704C1-EDF6-4894-86FB-16BABE9A7B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903704C1-EDF6-4894-86FB-16BABE9A7B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E9A314-6DB5-4B85-BC02-B08A4907BE6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E9A314-6DB5-4B85-BC02-B08A4907BE6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E9A314-6DB5-4B85-BC02-B08A4907BE6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E9A314-6DB5-4B85-BC02-B08A4907BE6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE0C23E1-3435-440F-ACAC-02C48DC7AF78} = {DB8E8C63-09A7-47BE-80BD-28FD115CD68B}
+		{FF10B82C-C37F-4AD0-907E-7D9CBEB61CFE} = {DB8E8C63-09A7-47BE-80BD-28FD115CD68B}
+		{903704C1-EDF6-4894-86FB-16BABE9A7B4B} = {CE0C23E1-3435-440F-ACAC-02C48DC7AF78}
+		{77E9A314-6DB5-4B85-BC02-B08A4907BE6D} = {CE0C23E1-3435-440F-ACAC-02C48DC7AF78}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C021671C-B53E-4CA2-9503-716C4A8066A6}
+	EndGlobalSection
+EndGlobal
