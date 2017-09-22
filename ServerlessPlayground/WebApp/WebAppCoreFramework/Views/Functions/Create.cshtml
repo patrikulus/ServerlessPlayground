@@ -1,0 +1,49 @@
+﻿@model WebAppCoreFramework.ViewModels.FunctionViewModel
+
+@{
+    ViewData["Title"] = "Functions";
+    string className;
+}
+
+<h2>View</h2>
+
+<h4>Create SQS message</h4>
+<hr />
+<div class="row">
+    @{
+        if (!string.IsNullOrEmpty(Model.Response))
+        {
+            className = Model.Response == "OK" ? "success" : "danger";
+            <div class="alert alert-@className }" role="alert">
+                @Model.Response
+            </div>
+        }
+    }
+    <div class="col-md-4">
+        <form asp-action="CreateAsync">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label"></label>
+                <input asp-for="Message" class="form-control" />
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Receiver" class="control-label"></label>
+                <input asp-for="Receiver" class="form-control" />
+                <span asp-validation-for="Receiver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
